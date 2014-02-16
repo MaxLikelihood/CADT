@@ -38,7 +38,7 @@ void* Stack_Pop(Stack* s)
 {
 	if (Stack_Empty(s)) return;
 	s->top = s->top - 1;
-	return s->e[s->top];
+	return s->e[s->top+1];
 }
 
 void Stack_Destroy(Stack* s)
