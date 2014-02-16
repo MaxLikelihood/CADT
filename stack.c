@@ -5,7 +5,7 @@ struct Stack
 	size_t size;
 	size_t top;
 	void** e;
-}
+};
 
 Stack* Stack_Create(size_t n)
 {
