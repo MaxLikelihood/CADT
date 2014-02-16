@@ -4,4 +4,8 @@
 struct Queue;
 typedef struct Queue Queue;
 
+Queue* Queue_Create(size_t n);
+void Queue_Destroy(Queue* q);
+void Queue_Enqueue(Queue* q, void* e);
+void* Queue_Dequeue(Queue* q);
 #endif
