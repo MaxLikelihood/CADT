@@ -36,7 +36,7 @@ void Stack_Push(Stack* s, void* e)
 
 void* Stack_Pop(Stack* s)
 {
-	if (Stack_Empty(s)) return;
+	if (Stack_Empty(s)) return NULL;
 	s->top = s->top - 1;
 	return s->e[s->top+1];
 }
