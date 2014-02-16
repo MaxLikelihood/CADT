@@ -16,3 +16,7 @@
 *.exe
 *.out
 *.app
+
+# Test and Development
+debug.c
+test.c
