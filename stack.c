@@ -25,3 +25,12 @@ int Stack_Empty(Stack* s)
 		return 0;
 	}
 }
+
+void Stack_Push(Stack* s, void* e)
+{
+	if (s == NULL) return;
+	if (s->top == s->size) return;
+	s->top = s->top + 1;
+	s->e[s->top] = e;
+}
+
