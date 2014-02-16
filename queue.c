@@ -42,6 +42,7 @@ void Queue_Enqueue(Queue* q, void* e)
 
 void* Queue_Dequeue(Queue* q)
 {
+	if (q == NULL) return NULL;
 	if (Queue_Empty(q)) return NULL;
 	void* e = q->e[q->head];
 	if (q->head == q->size)
