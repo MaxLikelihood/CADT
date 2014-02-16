@@ -19,4 +19,6 @@
 
 # Test and Development
 debug.c
+debug
 test.c
+test
