@@ -53,3 +53,10 @@ void* Queue_Dequeue(Queue* q)
 	}
 	return e;
 }
+
+void Queue_Destroy(Queue* q)
+{
+	if (q == NULL) return;
+	free(q->e);
+	free(q);
+}
