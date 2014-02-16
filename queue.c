@@ -26,3 +26,15 @@ int Queue_Full(Queue* q)
 {
 	return (q->head == q->tail + 1) || (q->head == 1 && q->tail == q->size);
 }
+
+void Queue_Enqueue(Queue* q, void* e)
+{
+	if (Queue_Full(q)) return;
+	q->e[q->tail] = e;
+	if (q->tail == q->size)
+	{
+		q->tail = 1;
+	} else {
+		q->tail = q->tail + 1;
+	}
+}
