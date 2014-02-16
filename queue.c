@@ -14,4 +14,5 @@ Queue* Queue_Create(size_t n)
 	q->size = n;
 	q->head = q->tail = 1;
 	q->e = (void **)malloc(sizeof(void*) * (n + 1));
+	return q;
 }
