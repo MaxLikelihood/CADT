@@ -41,3 +41,9 @@ void* Stack_Pop(Stack* s)
 	return s->e[s->top];
 }
 
+void Stack_Destroy(Stack* s)
+{
+	if (s == NULL) return;
+	free(s->e);
+	free(s);
+}
