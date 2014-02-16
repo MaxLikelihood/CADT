@@ -39,3 +39,16 @@ void Queue_Enqueue(Queue* q, void* e)
 		q->tail = q->tail + 1;
 	}
 }
+
+void* Queue_Dequeue(Queue* q)
+{
+	if (Queue_Empty(q)) return NULL;
+	void* e = q->e[q->head];
+	if (q->head == q->size)
+	{
+		q->head = 1;
+	} else {
+		q->head = q->head + 1;
+	}
+	return e;
+}
