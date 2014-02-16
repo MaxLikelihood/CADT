@@ -21,3 +21,8 @@ int Queue_Empty(Queue* q)
 {
 	return (q->head == q->tail);
 }
+
+int Queue_Full(Queue* q)
+{
+	return (q->head == q->tail + 1) || (q->head == 1 && q->tail == q->size);
+}
