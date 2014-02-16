@@ -34,3 +34,10 @@ void Stack_Push(Stack* s, void* e)
 	s->e[s->top] = e;
 }
 
+void* Stack_Pop(Stack* s)
+{
+	if (Stack_Empty(s)) return;
+	s->top = s->top - 1;
+	return s->e[s->top];
+}
+
