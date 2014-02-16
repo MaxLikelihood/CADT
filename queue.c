@@ -16,3 +16,8 @@ Queue* Queue_Create(size_t n)
 	q->e = (void **)malloc(sizeof(void*) * (n + 1));
 	return q;
 }
+
+int Queue_Empty(Queue* q)
+{
+	return (q->head == q->tail);
+}
