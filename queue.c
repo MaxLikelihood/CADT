@@ -29,6 +29,7 @@ int Queue_Full(Queue* q)
 
 void Queue_Enqueue(Queue* q, void* e)
 {
+	if (q == NULL) return;
 	if (Queue_Full(q)) return;
 	q->e[q->tail] = e;
 	if (q->tail == q->size)
