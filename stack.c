@@ -15,3 +15,13 @@ Stack* Stack_Create(size_t n)
 	s->e = (void**)malloc(sizeof(void*) * (n + 1));
 	return s;
 }
+
+int Stack_Empty(Stack* s)
+{
+	if (s->top == 0)
+	{
+		return 1;
+	} else {
+		return 0;
+	}
+}
