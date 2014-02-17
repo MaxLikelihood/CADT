@@ -79,3 +79,8 @@ void List_Destroy(List* l)
 	}
 	free(l);
 }
+
+void* ListNode_Retrieve(ListNode* n)
+{
+	if (n != NULL) return n->k;
+}
