@@ -9,5 +9,6 @@ typedef struct List List;
 List* List_Create(void);
 void List_Destroy(List* l);
 ListNode* ListNode_Create(void *);
+void ListNode_Destroy(ListNode* n);
 
 #endif
