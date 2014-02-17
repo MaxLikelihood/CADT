@@ -7,3 +7,7 @@ struct ListNode
 	void* k;
 };
 
+struct List
+{
+	ListNode* head;
+}
