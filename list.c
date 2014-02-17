@@ -27,3 +27,13 @@ ListNode* ListNode_Create(void* k)
 	n->k = k;
 	return n;
 }
+
+ListNode* List_Search(List* l, void* k, int (f)(void*, void*))
+{
+	ListNode* n = l->head;
+	while (n != NULL && !f(n->k, k))
+	{
+		n = n->next;
+	}
+	return n;
+}
