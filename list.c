@@ -18,3 +18,12 @@ List* List_Create(void)
 	l->head = NULL;
 	return l;
 }
+
+ListNode* ListNode_Create(void* k)
+{
+	ListNode* n = (ListNode *)malloc(sizeof(ListNode));
+	n->prev = NULL;
+	n->next = NULL;
+	n->k = k;
+	return n;
+}
