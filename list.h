@@ -8,7 +8,7 @@ typedef struct List List;
 
 List* List_Create(void);
 void List_Destroy(List* l);
-ListNode* ListNode_Create(void * k);
+ListNode* ListNode_Create(void* k);
 void ListNode_Destroy(ListNode* n);
 ListNode* List_Search(List* l, void* k, int (f)(void*, void*));
 void List_Insert(List* l, ListNode* n);
