@@ -62,3 +62,8 @@ void List_Delete(List* l, ListNode* n)
 		n->next->prev = n->prev;
 	}
 }
+
+void ListNode_Destroy(ListNode* n)
+{
+	free(n);
+}
