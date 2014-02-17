@@ -10,4 +10,5 @@ struct ListNode
 struct List
 {
 	ListNode* head;
-}
+};
+
