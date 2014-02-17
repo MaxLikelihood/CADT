@@ -48,3 +48,17 @@ void List_Insert(List* l, ListNode* n)
 	l->head = n;
 	n->prev = NULL;
 }
+
+void List_Delete(List* l, ListNode* n)
+{
+	if (n->prev != NULL)
+	{
+		n->prev->next = n->next;
+	} else {
+		l->head = n->next;
+	}
+	if (n->next != NULL)
+	{
+		n->next->prev = n->prev;
+	}
+}
