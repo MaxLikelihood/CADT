@@ -67,3 +67,15 @@ void ListNode_Destroy(ListNode* n)
 {
 	free(n);
 }
+
+void List_Destroy(List* l)
+{
+	ListNode* n = l->head;
+	while (n != NULL)
+	{
+		List_Delete(l, n);
+		ListNode_Destroy(n);
+		n = l->head;
+	}
+	free(l);
+}
