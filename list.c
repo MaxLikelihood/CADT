@@ -37,3 +37,14 @@ ListNode* List_Search(List* l, void* k, int (f)(void*, void*))
 	}
 	return n;
 }
+
+void List_Insert(List* l, ListNode* n)
+{
+	n->next = l->head;
+	if (l->head != NULL)
+	{
+		l->head->prev = n;
+	}
+	l->head = n;
+	n->prev = NULL;
+}
