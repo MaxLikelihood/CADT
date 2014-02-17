@@ -7,5 +7,6 @@ typedef struct ListNode ListNode;
 typedef struct List List;
 
 List* List_Create(void);
+void List_Destroy(List* l);
 
 #endif
