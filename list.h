@@ -10,5 +10,6 @@ List* List_Create(void);
 void List_Destroy(List* l);
 ListNode* ListNode_Create(void *);
 void ListNode_Destroy(ListNode* n);
+ListNode* List_Search(List* l, void* k, int f(void*, void*));
 
 #endif
