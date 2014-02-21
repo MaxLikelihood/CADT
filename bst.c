@@ -74,3 +74,17 @@ BSTNode* BST_Tree_Search(BSTNode* n, void* k, int (f)(void*, void*), int (g)(voi
 		return BST_Tree_Search(n->right, k, f, g);
 	}
 }
+
+BSTNode* BST_Iterative_Tree_Search(BSTNode* n, void* k, int (f)(void*, void*), int (g)(void*, void*))
+{
+	while (n != NULL && !f(n->k, k))
+	{
+		if (!g(n->k, k))
+		{
+			n = n->left;
+		} else {
+			n = n->right;
+		}
+	}
+	return n;
+}
