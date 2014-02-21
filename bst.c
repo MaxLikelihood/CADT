@@ -113,3 +113,19 @@ BSTNode* BST_Tree_Root(BST* T)
 {
 	if (T != NULL) return T->root;
 }
+
+BSTNode* BST_Tree_Successor(BSTNode* n)
+{
+	if (n == NULL) return n;
+	if (n->right != NULL)
+	{
+		return BST_Tree_Minimum(n->right);
+	}
+	BSTNode* p = n->p;
+	while (p != NULL && n == p->right)
+	{
+		n = p;
+		p = p->p;
+	}
+	return p;
+}
