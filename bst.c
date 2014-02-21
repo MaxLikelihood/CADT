@@ -41,3 +41,13 @@ void BST_Inorder_Tree_Walk(BSTNode* n, void (f)(void*))
 	}
 }
 
+void BST_Preorder_Tree_Walk(BSTNode* n, void (f)(void*))
+{
+	if (n != NULL)
+	{
+		f(n->k);
+		BST_Preorder_Tree_Walk(n->left, f);
+		BST_Preorder_Tree_Walk(n->right, f);
+	}
+}
+
