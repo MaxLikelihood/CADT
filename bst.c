@@ -10,3 +10,8 @@ struct BSTNode
 	void* k;
 };
 
+struct BST
+{
+	BSTNode* root;
+};
+
