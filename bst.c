@@ -88,3 +88,13 @@ BSTNode* BST_Iterative_Tree_Search(BSTNode* n, void* k, int (f)(void*, void*), i
 	}
 	return n;
 }
+
+BSTNode* BST_Tree_Minimum(BSTNode* n)
+{
+	if (n == NULL) return n;
+	while (n->left != NULL)
+	{
+		n = n->left;
+	}
+	return n;
+}
