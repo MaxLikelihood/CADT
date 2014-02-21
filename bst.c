@@ -60,3 +60,17 @@ void BST_Postorder_Tree_Walk(BSTNode* n, void (f)(void*))
 		f(n->k);
 	}
 }
+
+BSTNode* BST_Tree_Search(BSTNode* n, void* k, int (f)(void*, void*), int (g)(void*, void*))
+{
+	if (n == NULL || f(n->k, k))
+	{
+		return n;
+	}
+	if (!g(n->k, k))
+	{
+		return BST_Tree_Search(n->left, k, f, g);
+	} else {
+		return BST_Tree_Search(n->right, k, f, g);
+	}
+}
