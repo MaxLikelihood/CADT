@@ -9,5 +9,7 @@ typedef struct BST BST;
 BST* BST_Create(void);
 BSTNode* BSTNode_Create(void* k);
 void BST_Inorder_Tree_Walk(BST* T, void (f)(void*));
+void BST_Preorder_Tree_Walk(BST* T, void (f)(void*));
+void BST_Postorder_Tree_Walk(BST* T, void (f)(void*));
 
 #endif
