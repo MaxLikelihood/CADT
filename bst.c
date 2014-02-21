@@ -31,3 +31,13 @@ BSTNode* BSTNode_Create(void* k)
 	n->k = k;
 }
 
+void BST_Inorder_Tree_Walk(BSTNode* n, void (f)(void*))
+{
+	if (n != NULL)
+	{
+		BST_Inorder_Tree_Walk(n->left, f);
+		f(n->k);
+		BST_Inorder_Tree_Walk(n->right, f);
+	}
+}
+
