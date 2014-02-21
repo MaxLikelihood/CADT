@@ -18,5 +18,7 @@ BSTNode* BST_Tree_Maximum(BSTNode* n);
 BSTNode* BST_Tree_Root(BST* T);
 BSTNode* BST_Tree_Successor(BSTNode* n);
 BSTNode* BST_Tree_Predecessor(BSTNode* n);
+void BST_Tree_Insert(BST* T, BSTNode* n, int (f)(void*, void*), int (g)(void*, void*));
+void BST_Tree_Delete(BST* T, BSTNode* n, int (f)(void*, void*), int (g)(void*, void*));
 
 #endif
