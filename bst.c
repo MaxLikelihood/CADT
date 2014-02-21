@@ -1,4 +1,4 @@
 #include "bst.h"
 
-void BST_Transplant(BST* T, BSTNode* u, BSTNode* v);
+static void BST_Transplant(BST* T, BSTNode* u, BSTNode* v);
 
