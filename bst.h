@@ -16,5 +16,7 @@ BSTNode* BST_Iterative_Tree_Search(BST* T, void* k, int (f)(void*, void*), int (
 BSTNode* BST_Tree_Minimum(BSTNode* n);
 BSTNode* BST_Tree_Maximum(BSTNode* n);
 BSTNode* BST_Tree_Root(BST* T);
+BSTNode* BST_Tree_Successor(BSTNode* n);
+BSTNode* BST_Tree_Predecessor(BSTNode* n);
 
 #endif
