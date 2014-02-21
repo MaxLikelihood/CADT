@@ -15,3 +15,10 @@ struct BST
 	BSTNode* root;
 };
 
+BST* BST_Create(void)
+{
+	BST* T = (BST* )malloc(sizeof(BST));
+	T->root = NULL;
+	return T;
+}
+
