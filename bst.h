@@ -6,4 +6,6 @@ struct BST;
 typedef struct BSTNode BSTNode;
 typedef struct BST BST;
 
+BST* BST_Create(void);
+
 #endif
