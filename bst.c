@@ -108,3 +108,8 @@ BSTNode* BST_Tree_Maximum(BSTNode* n)
 	}
 	return n;
 }
+
+BSTNode* BST_Tree_Root(BST* T)
+{
+	if (T != NULL) return T->root;
+}
