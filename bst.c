@@ -98,3 +98,13 @@ BSTNode* BST_Tree_Minimum(BSTNode* n)
 	}
 	return n;
 }
+
+BSTNode* BST_Tree_Maximum(BSTNode* n)
+{
+	if (n == NULL) return n;
+	while (n->right != NULL)
+	{
+		n = n->right;
+	}
+	return n;
+}
