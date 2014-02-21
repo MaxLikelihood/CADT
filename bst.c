@@ -22,3 +22,12 @@ BST* BST_Create(void)
 	return T;
 }
 
+BSTNode* BSTNode_Create(void* k)
+{
+	BSTNode* n = (BSTNode* )malloc(sizeof(BSTNode));
+	n->left = NULL;
+	n->right = NULL;
+	n->p = NULL;
+	n->k = k;
+}
+
