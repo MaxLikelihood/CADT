@@ -129,3 +129,19 @@ BSTNode* BST_Tree_Successor(BSTNode* n)
 	}
 	return p;
 }
+
+BSTNode* BST_Tree_Predecessor(BSTNode* n)
+{
+	if (n == NULL) return n;
+	if (n->left != NULL)
+	{
+		return BST_Tree_Maximum(n->left);
+	}
+	BSTNode* p = n->p;
+	while (p != NULL && n == p->left)
+	{
+		n = p;
+		p = p->p;
+	}
+	return p;
+}
