@@ -145,3 +145,30 @@ BSTNode* BST_Tree_Predecessor(BSTNode* n)
 	}
 	return p;
 }
+
+void BST_Tree_Insert(BST* T, BSTNode* n, int (f)(void*, void*), int (g)(void*, void*))
+{
+	BSTNode* p = NULL;
+	BSTNode* t = T->root;
+	void* k = n->k;
+	while (t != NULL)
+	{
+		p = t;
+		if (!g(t->k, k))
+		{
+			t = t->left;
+		} else {
+			t = t->right;
+		}
+	}
+	n->p = p;
+	if (p == NULL)
+	{
+		T->root = n;
+	} else if (!g(p->k, k))
+	{
+		p->left = n;
+	} else {
+		p->right = n;
+	}
+}
